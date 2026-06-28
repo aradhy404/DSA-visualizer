@@ -36,7 +36,10 @@ async function bubbleSort() {
             
             bars[j].style.backgroundColor = 'purple';
             bars[j+1].style.backgroundColor = 'purple';
+
         }
+            bars[bars.length-1-i].style.backgroundColor = 'green'
+            bars[i].style.backgroundColor = 'green'
     }
 }
 
