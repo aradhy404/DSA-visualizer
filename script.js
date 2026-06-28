@@ -37,3 +37,19 @@ async function bubbleSort() {
         }
     }
 }
+
+async function SelectionSort(){
+    let bars = Array.from(document.getElementById('array-container').children)
+    for(let i = 0;i<bars.length;i++){
+        let minIdx = i
+        for(let j = i+1;j<bars.length;j++){
+            if(parseInt(bars[minIdx].style.height)>parseInt(bars[j].style.height)){
+                minIdx = j
+            }
+        }
+        let temp = bars[minIdx].style.height
+        bars[minIdx].style.height = bars[i].style.height
+        bars[i].style.height = temp
+        await new Promise(r => setTimeout(r, 100));
+    }
+}
