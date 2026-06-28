@@ -24,7 +24,7 @@ async function bubbleSort() {
             bars[j].style.backgroundColor = 'red';
             bars[j+1].style.backgroundColor = 'red';
             
-            await new Promise(r => setTimeout(r, 100));
+            await new Promise(r => setTimeout(r, document.getElementById('speed').value));
             
             let h1 = bars[j].style.height;
             let h2 = bars[j+1].style.height;
@@ -50,7 +50,7 @@ async function SelectionSort(){
         for(let j = i+1;j<bars.length;j++){
 
             bars[j].style.backgroundColor ='red'
-            await new Promise(r => setTimeout(r,50))
+            await new Promise(r => setTimeout(r,document.getElementById('speed').value/2))
 
             if(parseInt(bars[minIdx].style.height)>parseInt(bars[j].style.height)){
                 minIdx = j
@@ -65,7 +65,7 @@ async function SelectionSort(){
 
         bars[bars.length - 1 - i].style.backgroundColor = 'green'
         bars[i].style.backgroundColor = 'green'
-        await new Promise(r => setTimeout(r, 100));
+        await new Promise(r => setTimeout(r, document.getElementById('speed').value));
     }
     
 }
