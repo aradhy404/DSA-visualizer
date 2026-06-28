@@ -1,3 +1,5 @@
+const { promises } = require("nodemailer/lib/xoauth2");
+
 function generateArray(){
     const container = document.getElementById('array-container');
     container.innerHTML = '';
@@ -43,13 +45,24 @@ async function SelectionSort(){
     for(let i = 0;i<bars.length;i++){
         let minIdx = i
         for(let j = i+1;j<bars.length;j++){
+
+            bars[j].style.backgroundColor ='red'
+            await new Promise(r => setTimeout(r,50))
+
             if(parseInt(bars[minIdx].style.height)>parseInt(bars[j].style.height)){
                 minIdx = j
             }
+            if(bars.length>j+1)
+            bars[j+1].style.backgroundColor = 'red'
+            bars[j].style.backgroundColor ='purple'
         }
         let temp = bars[minIdx].style.height
         bars[minIdx].style.height = bars[i].style.height
         bars[i].style.height = temp
+
+        bars[bars.length - 1 - i].style.backgroundColor = 'green'
+        bars[i].style.backgroundColor = 'green'
         await new Promise(r => setTimeout(r, 100));
     }
+    
 }
