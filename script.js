@@ -1,19 +1,21 @@
-const { promises } = require("nodemailer/lib/xoauth2");
-
 function generateArray(){
     const container = document.getElementById('array-container');
     container.innerHTML = '';
-
-    for(let i = 0;i<20;i++){
+    
+    let size = document.getElementById('Size').value;
+    for(let i = 0;i<size;i++){
         let height = Math.floor(Math.random()*300) + 30;
         let bar = document.createElement('div');
         bar.style.height = height +'px';
-        bar.style.backgroundColor = 'purple';
+        bar.style.backgroundColor = '	#617487';
         bar.style.width = '30px';
         bar.style.display = 'block';
         bar.style.margin = '2px';
         container.appendChild(bar);
     }
+}
+document.getElementById('Size').oninput = function(){
+    generateArray();
 }
 async function bubbleSort() {
     let bars = document.getElementsByTagName('div');
@@ -34,8 +36,8 @@ async function bubbleSort() {
                 bars[j+1].style.height = h1;
             }
             
-            bars[j].style.backgroundColor = 'purple';
-            bars[j+1].style.backgroundColor = 'purple';
+            bars[j].style.backgroundColor = '#617487';
+            bars[j+1].style.backgroundColor = '	#617487';
 
         }
             bars[bars.length-1-i].style.backgroundColor = 'green'

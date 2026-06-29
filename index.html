@@ -1,16 +1,34 @@
 <html>
+
 <head>
     <title>DSA Visualizer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>DSA Visualizer</h1>
+    <h4>Watch algorithm work step by step</h4>
     <div id="array-container"></div>
-    <button onclick="generateArray()">Generate Array</button>
-    <button onclick="bubbleSort()">Bubble Sort</button>
-    <button onclick="SelectionSort()">Selection Sort</button>
-    <label style="color: white;">Speed: </label>
-    <input type="range" id="speed" min="10" max="500" value="100">
-    <script src ="script.js"></script>
-    </body>
+    <div id="control-panel">
+        <button onclick="generateArray()">Generate Array</button>
+        <button onclick="bubbleSort()">Bubble Sort</button>
+        <button onclick="SelectionSort()">Selection Sort</button>
+
+        <label style="color: white;">Array Size <span id="sizevalue">50</span></label>
+        <input type="range" id="Size" min="5" max="100" value="50" oninput="document.getElementById('sizevalue').innerText = this.value">
+    
+        <label style="color: white;">Speed: </label>
+        <label for="algorithm">Select Algorithm</label>
+        <input type="range" id="speed" min="10" max="500" value="100">
+    
+    
+        <select name="algorithm" id="algorithm">
+            <option value="bubbleSort">Bubbles Sort</option>
+            <option value="SelectionSort">Selection Sort</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>

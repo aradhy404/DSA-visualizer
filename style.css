@@ -1,10 +1,16 @@
 body{
-    background-color: #0e0e50;
+    background-color: #333333;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
     color: white;
+    padding: 20px;
+}
+h1,h4{
+    align-self: flex-start;
+    margin: 5px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #array-container {
@@ -13,18 +19,32 @@ body{
     align-items: flex-end;
     justify-content: center;
     height: 350px;
-    border: 1px solid red;
+    border: 1px solid white;
     padding: 10px;
-    margin: 20px;
+    margin: 20px 0;
     width: 80%;
 }
 
 button {
     margin: 5px;
     padding: 10px 20px;
-    background-color: rgb(52, 184, 8);
-    color: rgb(0, 0, 0);
+    background-color: #427ea3;
+    color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
+}
+
+#control-panel{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 10px auto;
+    background-color: #383f49;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
