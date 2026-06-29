@@ -19,6 +19,14 @@ function generateArray(){
 document.getElementById('Size').oninput = function(){
     generateArray();
 }
+function StartSort(){
+    let algorithm = document.getElementById('algorithm').value;
+    if(algorithm == 'bubbleSort'){
+        bubbleSort();
+    }else if(algorithm == 'SelectionSort'){
+        SelectionSort();
+    }
+}
 async function bubbleSort() {
     let bars = document.getElementsByTagName('div');
     bars = Array.from(bars).filter(bar => bar.parentElement.id === 'array-container');
