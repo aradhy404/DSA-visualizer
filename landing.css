@@ -1,0 +1,71 @@
+body{
+    background-color: #1b3147;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 10%;
+    color: white;
+    margin: 0px;
+}
+
+.topicgrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0px;
+    width: 100%;
+}
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+    background-color: #2d6a9f;
+    min-height: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #4a9fd4;
+}
+
+.comingsoon{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #314559;
+    min-height: 10px;
+    padding: 50px;
+    border-radius: 10px;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.Soon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.para{
+    background-color: #314559;
+    border-radius: 50px;
+    min-height: 5px;
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+h1{
+    display: flex;
+    font-family: sans-serif;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

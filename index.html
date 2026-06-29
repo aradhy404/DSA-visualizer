@@ -1,33 +1,31 @@
 <html>
+    <head>
+        <title>DSA Visualizer</title>
+        <link rel="stylesheet" href="landing.css">
+    </head>
 
-<head>
-    <title>DSA Visualizer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <div class="para">
+              <p>Fun way to learn DSA</p>
+        </div>
+        <h1>See  how things works</h1>
+        <p>Choose a topic to see how it works</p>
+        
+      
 
-<body>
-    <h1>DSA Visualizer</h1>
-    <h4>Watch algorithm work step by step</h4>
-    <div id="array-container"></div>
-    <div id="control-panel">
-        <button onclick="generateArray()">Generate Array</button>
-        <button onclick="StartSort()">Sort</button>
-
-        <label style="color: white;">Array Size <span id="sizevalue">50</span></label>
-        <input type="range" id="Size" min="5" max="100" value="50" oninput="document.getElementById('sizevalue').innerText = this.value">
+        <p>TOPICS</p>
+        <div class="topicgrid">
+            <a href = "sorting.html">
+            <div class="card-item">Sorting</div>
+            </a>
+            <div class="comingsoon"><span class="Soon">SOON</span>
+                Linked List</div>
+            <div class="comingsoon"><span class="Soon">SOON</span>
+                Searching</div>
+            <div class="comingsoon"><span class="Soon">SOON</span>
+                Graph</div>
+        </div>
+        <p></p>
+    </body>
     
-        <label style="color: white;">Speed: </label>
-        <label for="algorithm">Select Algorithm</label>
-        <input type="range" id="speed" min="10" max="500" value="100">
-    
-    
-        <select name="algorithm" id="algorithm">
-            <option value="bubbleSort">Bubbles Sort</option>
-            <option value="SelectionSort">Selection Sort</option>
-        </select>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
 </html>
