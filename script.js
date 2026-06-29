@@ -3,14 +3,16 @@ function generateArray(){
     container.innerHTML = '';
     
     let size = document.getElementById('Size').value;
+    let barwidth = Math.floor(780/size);
     for(let i = 0;i<size;i++){
         let height = Math.floor(Math.random()*300) + 30;
         let bar = document.createElement('div');
         bar.style.height = height +'px';
         bar.style.backgroundColor = '	#617487';
-        bar.style.width = '30px';
+        bar.style.width = barwidth + 'px'
         bar.style.display = 'block';
         bar.style.margin = '2px';
+        bar.style.borderRadius = '10px 10px';
         container.appendChild(bar);
     }
 }
