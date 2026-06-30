@@ -25,6 +25,8 @@ function StartSort(){
         bubbleSort();
     }else if(algorithm == 'SelectionSort'){
         SelectionSort();
+    }else if(algorithm == 'insertionsort'){
+        insertionsort();
     }
 }
 async function bubbleSort() {
@@ -78,6 +80,37 @@ async function SelectionSort(){
         bars[bars.length - 1 - i].style.backgroundColor = 'green'
         bars[i].style.backgroundColor = 'green'
         await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+    }
+    
+}
+
+async function insertionsort() {
+    //let bars = document.getElementById('div')
+    bars = Array.from(document.getElementById('array-container').children)
+    for(let i = 1;i<bars.length;i++){
+        let key = parseInt(bars[i].style.height);
+        let j = i-1;
+
+        bars[i].style.backgroundColor = 'red'; 
+
+        await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+
+        while(j>-1 && parseInt(bars[j].style.height)>key){
+            bars[j].style.backgroundColor = 'red';
+            await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+
+            bars[j+1].style.height = bars[j].style.height
+            bars[j].style.backgroundColor = 'orange';
+            await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+
+            j--
+        }
+        bars[j+1].style.height = key + 'px';
+        bars[i].style.backgroundColor = '#617487'
+            
+    }
+    for(let bar of bars){
+        bar.style.backgroundColor = 'green';
     }
     
 }
