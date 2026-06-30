@@ -1,3 +1,7 @@
+let stopRequested = false;
+window.onload = function(){
+    generateArray()
+}
 function generateArray(){
     const container = document.getElementById('array-container');
     container.innerHTML = '';
@@ -16,6 +20,21 @@ function generateArray(){
         container.appendChild(bar);
     }
 }
+
+
+function resetarray(){
+    generateArray();
+}
+
+function stoprequest(){
+    stopRequested = true
+    setTimeout (() =>{
+        stopRequested = false
+    },50
+);
+    
+}
+
 document.getElementById('Size').oninput = function(){
     generateArray();
 }
@@ -29,12 +48,14 @@ function StartSort(){
         insertionsort();
     }
 }
-async function bubbleSort() {
+async function bubbleSort() {    
     let bars = document.getElementsByTagName('div');
     bars = Array.from(bars).filter(bar => bar.parentElement.id === 'array-container');
     
     for(let i = 0; i < bars.length; i++){
+        if(stopRequested) return;
         for(let j = 0; j < bars.length - i - 1; j++){
+            if(stopRequested) return;
             bars[j].style.backgroundColor = 'red';
             bars[j+1].style.backgroundColor = 'red';
             
@@ -58,10 +79,15 @@ async function bubbleSort() {
 }
 
 async function SelectionSort(){
+    
+
     let bars = Array.from(document.getElementById('array-container').children)
     for(let i = 0;i<bars.length;i++){
+        if(stopRequested) return;
         let minIdx = i
         for(let j = i+1;j<bars.length;j++){
+
+            if(stopRequested) return;
 
             bars[j].style.backgroundColor ='red'
             await new Promise(r => setTimeout(r,document.getElementById('speed').value/2))
@@ -84,10 +110,12 @@ async function SelectionSort(){
     
 }
 
+
 async function insertionsort() {
     //let bars = document.getElementById('div')
     bars = Array.from(document.getElementById('array-container').children)
     for(let i = 1;i<bars.length;i++){
+        if(stopRequested) return;
         let key = parseInt(bars[i].style.height);
         let j = i-1;
 
@@ -96,6 +124,7 @@ async function insertionsort() {
         await new Promise(r => setTimeout(r, document.getElementById('speed').value));
 
         while(j>-1 && parseInt(bars[j].style.height)>key){
+            if(stopRequested) return;
             bars[j].style.backgroundColor = 'red';
             await new Promise(r => setTimeout(r, document.getElementById('speed').value));
 
