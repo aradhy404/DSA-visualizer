@@ -1,3 +1,5 @@
+
+
 let stopRequested = false;
 window.onload = function(){
     generateArray()
@@ -22,6 +24,12 @@ function generateArray(){
 }
 
 
+document.getElementById('Size').oninput = function(){
+    document.getElementById('sizevalue').innerText = this.value;
+    generateArray();
+}
+
+
 function resetarray(){
     generateArray();
 }
@@ -35,9 +43,7 @@ function stoprequest(){
     
 }
 
-document.getElementById('Size').oninput = function(){
-    generateArray();
-}
+
 function StartSort(){
     let algorithm = document.getElementById('algorithm').value;
     if(algorithm == 'bubbleSort'){
