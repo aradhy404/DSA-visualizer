@@ -9,6 +9,11 @@ body{
     margin: 0px;
 }
 
+.highlight {
+    color: #22ddd2;
+}
+
+
 .topicgrid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -64,7 +69,6 @@ a{
 }
 
 h1{
-    display: flex;
     font-family: sans-serif;
     align-items: flex-start;
     justify-content: flex-start;
