@@ -14,6 +14,17 @@ h1,h4{
 }
 
 
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
 
 .pagewrap {
     width: 80%;
@@ -21,7 +32,29 @@ h1,h4{
 }
 
 
+.legend{
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
 
+.dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.idle{
+    background-color: #2e73ea;
+}
+.compare{
+    background-color: red;
+}
+.sorted{
+
+    background-color: green;
+}
 
 
 
@@ -36,6 +69,7 @@ h1,h4{
     width: 100%;
     background-color: 		#172d67;
     border-radius: 10px;
+    border: 1px solid 	#8c15e9;
 }
 
 button {
@@ -60,4 +94,5 @@ button {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+    border: 1px solid 	#8c15e9;
 }

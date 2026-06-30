@@ -2,39 +2,53 @@
 
 <head>
     <title>DSA Visualizer</title>
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+
     <div class="pagewrap">
-    <h1>DSA Visualizer</h1>
-    <h4>Watch algorithm work step by step</h4>
-    <div id="array-container"></div>
-    <div id="control-panel">
-        <label for="algorithm">Select Algorithm</label>
-        <select name="algorithm" id="algorithm">
-            <option value="bubbleSort">Bubble Sort</option>
-            <option value="SelectionSort">Selection Sort</option>
-            <option value="insertionsort">Insertion Sort</option>
+        <div class="head">
+            <div class="title">
+                <h1>DSA Visualizer</h1>
+                <h4>Watch algorithm work step by step</h4>
+            </div>
 
-        </select>
+            <div class="legend">
+                <span><span class="dot idle"></span> Idle</span>
+                <span><span class="dot compare"></span> Compare</span>
+                <span><span class="dot sorted"></span> Sorted</span>
+            </div>
+        </div>
 
-        <label style="color: white;">Array Size <span id="sizevalue">50</span></label>
-        <input type="range" id="Size" min="5" max="100" value="50" >
-    
-        <label style="color: white;">Speed: </label>
-        <input type="range" id="speed" min="10" max="500" value="100">
+        <div id="array-container"></div>
+        <div id="control-panel">
+            <label for="algorithm">Select Algorithm</label>
+            <select name="algorithm" id="algorithm">
+                <option value="bubbleSort">Bubble Sort</option>
+                <option value="SelectionSort">Selection Sort</option>
+                <option value="insertionsort">Insertion Sort</option>
 
-        
-        <button onclick="generateArray()">New</button>
-        <button onclick="resetarray()">Reset Array</button>
-        <button id="sortBtn" onclick="startstop()">Sort</button>
+            </select>
 
-        
-    
-        
-    </div>
+            <label style="color: white;">Array Size <span id="sizevalue">50</span></label>
+            <input type="range" id="Size" min="5" max="100" value="50">
+
+            <label style="color: white;">Speed: </label>
+            <input type="range" id="speed" min="10" max="500" value="100">
+
+
+            <button onclick="generateArray()">New</button>
+            <button onclick="resetarray()">Reset Array</button>
+            <button id="sortBtn" onclick="startstop()">Sort</button>
+
+
+
+
+        </div>
     </div>
 
     <script src="script.js"></script>
