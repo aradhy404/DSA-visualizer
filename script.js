@@ -9,12 +9,12 @@ function generateArray() {
     container.innerHTML = '';
 
     let size = document.getElementById('Size').value;
-    let barwidth = Math.floor(780 / size);
+    let barwidth = Math.floor(1500 / size);
     for (let i = 0; i < size; i++) {
-        let height = Math.floor(Math.random() * 300) + 30;
+        let height = Math.floor(Math.random() * 500) + 30;
         let bar = document.createElement('div');
         bar.style.height = height + 'px';
-        bar.style.backgroundColor = '	#617487';
+        bar.style.backgroundColor = '	#2e73ea';
         bar.style.width = barwidth + 'px'
         bar.style.display = 'block';
         bar.style.margin = '2px';
