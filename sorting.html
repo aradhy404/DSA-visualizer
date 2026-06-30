@@ -10,16 +10,6 @@
     <h4>Watch algorithm work step by step</h4>
     <div id="array-container"></div>
     <div id="control-panel">
-        <button onclick="StartSort()">Sort</button>
-        <button onclick="stoprequest()">Stop</button>
-        <button onclick="resetarray()">Reset Array</button>
-
-        <label style="color: white;">Array Size <span id="sizevalue">50</span></label>
-        <input type="range" id="Size" min="5" max="100" value="50" >
-    
-        <label style="color: white;">Speed: </label>
-        <input type="range" id="speed" min="10" max="500" value="100">
-    
         <label for="algorithm">Select Algorithm</label>
         <select name="algorithm" id="algorithm">
             <option value="bubbleSort">Bubbles Sort</option>
@@ -27,6 +17,21 @@
             <option value="insertionsort">Insertion Sort</option>
 
         </select>
+
+        <label style="color: white;">Array Size <span id="sizevalue">50</span></label>
+        <input type="range" id="Size" min="5" max="100" value="50" >
+    
+        <label style="color: white;">Speed: </label>
+        <input type="range" id="speed" min="10" max="500" value="100">
+
+        
+        <button onclick="generateArray()">New</button>
+        <button onclick="resetarray()">Reset Array</button>
+        <button id="sortBtn" onclick="startstop()">Sort</button>
+
+        
+    
+        
     </div>
 
     <script src="script.js"></script>
