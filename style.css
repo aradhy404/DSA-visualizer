@@ -1,5 +1,6 @@
 body{
-    background-color: #17072b;
+    background: #00a2ff;
+    background: linear-gradient(90deg, rgba(0, 162, 255, 1) 0%, rgba(15, 213, 101, 1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,14 +47,14 @@ h1,h4{
 }
 
 .idle{
-    background-color: #2e73ea;
+    background-color: #00B2FF;
 }
 .compare{
-    background-color: red;
+    background-color: #FF5A5F;
 }
 .sorted{
 
-    background-color: green;
+    background-color: #00FF6A;
 }
 
 
@@ -67,7 +68,7 @@ h1,h4{
     padding: 5px;
     margin: 10px 0;
     width: 100%;
-    background-color: 		#172d67;
+    background-color:#0A75A3;
     border-radius: 10px;
     border: 1px solid 	#8c15e9;
 }
@@ -75,7 +76,7 @@ h1,h4{
 button {
     margin: 5px;
     padding: 10px 20px;
-    background-color: 	#8c15e9;
+    background-color: 	#00d8ff;
     color: white;
     border: none;
     cursor: pointer;
@@ -88,7 +89,7 @@ button {
     gap: 20px;
     align-items: flex-start;
     margin: 10px auto;
-    background-color: 	#172d67;
+    background-color: 	#0A75A3;
     border-radius: 10px;
     padding: 10px;
     width: 100%;
