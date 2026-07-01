@@ -36,10 +36,7 @@ function resetarray() {
 
 function stoprequest() {
     stopRequested = true
-    setTimeout(() => {
-        stopRequested = false
-    }, 50
-    );
+
 
 }
 
@@ -71,6 +68,15 @@ function StartSort() {
         insertionsort();
     }
 }
+
+
+function resetsortbtn(){
+    issorting = false;
+    stopRequested = false;
+    document.getElementById('sortBtn').innerText = "Sort";
+    document.getElementById('sortBtn').style.backgroundColor = "cyan";
+}
+
 async function bubbleSort() {
     let bars = document.getElementsByTagName('div');
     bars = Array.from(bars).filter(bar => bar.parentElement.id === 'array-container');
@@ -99,7 +105,15 @@ async function bubbleSort() {
         bars[bars.length - 1 - i].style.backgroundColor = 'green'
         bars[i].style.backgroundColor = 'green'
     }
+    resetsortbtn();
+    if(stopRequested){
+    resetsortbtn();
+    return;}
+    
+
 }
+    
+
 
 async function SelectionSort() {
 
@@ -130,6 +144,11 @@ async function SelectionSort() {
         bars[i].style.backgroundColor = 'green'
         await new Promise(r => setTimeout(r, document.getElementById('speed').value));
     }
+
+    resetsortbtn();
+    if(stopRequested){
+    resetsortbtn();
+    return;}
 
 }
 
@@ -164,5 +183,10 @@ async function insertionsort() {
     for (let bar of bars) {
         bar.style.backgroundColor = 'green';
     }
+
+    resetsortbtn();
+    if(stopRequested){
+    resetsortbtn();
+    return;}
 
 }
