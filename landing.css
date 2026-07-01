@@ -1,10 +1,7 @@
 body{
-    background-color: #17072b;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background: #187194;
+background: linear-gradient(90deg, rgba(24, 113, 148, 1) 27%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 10%;
     color: white;
     margin: 0px;
 }
@@ -22,28 +19,70 @@ body{
     width: 100%;
 }
 
+.icon-bg {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
 .card-item{
     display: flex;
     flex-direction: column;
-    background-color: #2e73ea;
+    background: #00A1E0;
     min-height: 50px;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 22px;
     cursor: pointer;
-    border: 1px solid #4a9fd4;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.25s ease;
+}
+
+.titleline{
+    width: 650px;
+    margin: 0;
+    color: #9ca3af;
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+.topic{
+    margin-top: 100px;
+    margin-bottom: 15px;
+    color: #cfcfcf;
+    opacity: 0.7;
+}
+.card-item:hover,
+.comingsoon:hover{
+    transform:translateY(-6px);
 }
 
 .comingsoon{
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #172d67;
+    transition:.25s ease;
+    background-color: #027DAD;
     min-height: 10px;
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 22px;
+    border:1px solid rgba(255,255,255,.08);
     cursor: not-allowed;
     opacity: 0.6;
 }
+
+.all{
+    max-width:1350px;
+    margin:auto;
+    padding:100px 200px;
+}
+
+
 .Soon{
     position: absolute;
     top: 10px;
@@ -58,18 +97,31 @@ a{
 }
 
 .para{
-    background-color: #314559;
-    border-radius: 50px;
-    min-height: 5px;
-    padding: 4px 10px;
+    background-color: rgba(74, 101, 132, 0.75);
+    border-radius: 999px;
+    padding: 8px 18px;
     display: inline-flex;
-    align-items: flex-start;
-    font-size: 13px;
-    font-family: sans-serif;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    gap: 8px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: arial,sans-serif;
+}
+.para p{
+    margin: 0;
 }
 
 h1{
     font-family: sans-serif;
     align-items: flex-start;
     justify-content: flex-start;
+    font-size: 68px;
+    line-height: 1.1;
+    margin: 25px 0 8px;
+    
 }
+
+
+
