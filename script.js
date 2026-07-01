@@ -88,7 +88,7 @@ async function bubbleSort() {
             bars[j].style.backgroundColor = 'red';
             bars[j + 1].style.backgroundColor = 'red';
 
-            await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+            await new Promise(r => setTimeout(r,500- document.getElementById('speed').value));
 
             let h1 = bars[j].style.height;
             let h2 = bars[j + 1].style.height;
@@ -127,7 +127,7 @@ async function SelectionSort() {
             if (stopRequested) return;
 
             bars[j].style.backgroundColor = 'red'
-            await new Promise(r => setTimeout(r, document.getElementById('speed').value / 2))
+            await new Promise(r => setTimeout(r, 500-document.getElementById('speed').value / 2))
 
             if (parseInt(bars[minIdx].style.height) > parseInt(bars[j].style.height)) {
                 minIdx = j
@@ -142,7 +142,7 @@ async function SelectionSort() {
 
         bars[bars.length - 1 - i].style.backgroundColor = 'green'
         bars[i].style.backgroundColor = 'green'
-        await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+        await new Promise(r => setTimeout(r,500 - document.getElementById('speed').value));
     }
 
     resetsortbtn();
@@ -163,16 +163,16 @@ async function insertionsort() {
 
         bars[i].style.backgroundColor = 'red';
 
-        await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+        await new Promise(r => setTimeout(r, 500 -document.getElementById('speed').value));
 
         while (j > -1 && parseInt(bars[j].style.height) > key) {
             if (stopRequested) return;
             bars[j].style.backgroundColor = 'red';
-            await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+            await new Promise(r => setTimeout(r,500- document.getElementById('speed').value));
 
             bars[j + 1].style.height = bars[j].style.height
             bars[j].style.backgroundColor = 'orange';
-            await new Promise(r => setTimeout(r, document.getElementById('speed').value));
+            await new Promise(r => setTimeout(r, 500-document.getElementById('speed').value));
 
             j--
         }
